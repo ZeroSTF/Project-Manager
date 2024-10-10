@@ -1,6 +1,6 @@
 # Project Manager
 
-A basic C-based project management tool with task tracking and network functionality.
+A basic C-based project management tool for linux based systems with task tracking and network functionality.
 
 ## Features
 
