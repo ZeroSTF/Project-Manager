@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
+#include <pthread.h>
 
 #define PORT 8080
 #define MAX_CLIENTS 5
@@ -14,7 +15,7 @@ void *handle_client(void *arg) {
     Project *project = (Project*)(arg + sizeof(int));
     
     char buffer[1024] = {0};
-    int valread = read(client_socket, buffer, 1024);
+    read(client_socket, buffer, 1024);
     printf("Received: %s\n", buffer);
     
     // Process the command (simplified for this example)
